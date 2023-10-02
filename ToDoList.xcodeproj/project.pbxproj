@@ -14,6 +14,7 @@
 		DE8BEFCF2ACB32CD001064A9 /* ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8BEFCE2ACB32CD001064A9 /* ToDoListTests.swift */; };
 		DE8BEFD92ACB32CD001064A9 /* ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8BEFD82ACB32CD001064A9 /* ToDoListUITests.swift */; };
 		DE8BEFDB2ACB32CD001064A9 /* ToDoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8BEFDA2ACB32CD001064A9 /* ToDoListUITestsLaunchTests.swift */; };
+		DE8ECBFA2ACB454A00A99ACE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE8ECBF92ACB454A00A99ACE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		DE8BEFD42ACB32CD001064A9 /* ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8BEFD82ACB32CD001064A9 /* ToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITests.swift; sourceTree = "<group>"; };
 		DE8BEFDA2ACB32CD001064A9 /* ToDoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DE8ECBF92ACB454A00A99ACE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		DE8BEFBC2ACB32CA001064A9 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				DE8ECBF92ACB454A00A99ACE /* GoogleService-Info.plist */,
 				DE8BEFBD2ACB32CA001064A9 /* ToDoListApp.swift */,
 				DE8BEFBF2ACB32CA001064A9 /* ContentView.swift */,
 				DE8BEFC12ACB32CD001064A9 /* Assets.xcassets */,
@@ -215,6 +218,9 @@
 				Base,
 			);
 			mainGroup = DE8BEFB12ACB32CA001064A9;
+			packageReferences = (
+				DE8ECBF82ACB42E600A99ACE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = DE8BEFBB2ACB32CA001064A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +239,7 @@
 			files = (
 				DE8BEFC52ACB32CD001064A9 /* Preview Assets.xcassets in Resources */,
 				DE8BEFC22ACB32CD001064A9 /* Assets.xcassets in Resources */,
+				DE8ECBFA2ACB454A00A99ACE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +432,11 @@
 				DEVELOPMENT_TEAM = LZ55Q48Z5Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "To Do List";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +461,11 @@
 				DEVELOPMENT_TEAM = LZ55Q48Z5Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "To Do List";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -588,6 +595,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE8ECBF82ACB42E600A99ACE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.15.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = DE8BEFB22ACB32CA001064A9 /* Project object */;
 }
