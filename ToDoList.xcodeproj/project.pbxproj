@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE740E1C2ACC5EC600BC46D8 /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE740E1B2ACC5EC600BC46D8 /* TLButton.swift */; };
 		DE8BC5642ACBA3A900F72C20 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8BC5632ACBA3A900F72C20 /* Constants.swift */; };
-		DE8BC5672ACBA4EF00F72C20 /* HeaderViewDataMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8BC5662ACBA4EF00F72C20 /* HeaderViewDataMock.swift */; };
 		DE8BEFBE2ACB32CA001064A9 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8BEFBD2ACB32CA001064A9 /* ToDoListApp.swift */; };
 		DE8BEFC02ACB32CA001064A9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8BEFBF2ACB32CA001064A9 /* MainView.swift */; };
 		DE8BEFC22ACB32CD001064A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8BEFC12ACB32CD001064A9 /* Assets.xcassets */; };
@@ -47,8 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE740E1B2ACC5EC600BC46D8 /* TLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TLButton.swift; sourceTree = "<group>"; };
 		DE8BC5632ACBA3A900F72C20 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		DE8BC5662ACBA4EF00F72C20 /* HeaderViewDataMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewDataMock.swift; sourceTree = "<group>"; };
 		DE8BEFBA2ACB32CA001064A9 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8BEFBD2ACB32CA001064A9 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		DE8BEFBF2ACB32CA001064A9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -97,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE740E192ACC5EAF00BC46D8 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				DE740E1B2ACC5EC600BC46D8 /* TLButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		DE8BC5622ACBA39700F72C20 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +116,6 @@
 		DE8BC5652ACBA4E100F72C20 /* HeaderView */ = {
 			isa = PBXGroup;
 			children = (
-				DE8BC5662ACBA4EF00F72C20 /* HeaderViewDataMock.swift */,
 			);
 			path = HeaderView;
 			sourceTree = "<group>";
@@ -270,6 +277,7 @@
 		DEA477D22ACB98C200DC3507 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DE740E192ACC5EAF00BC46D8 /* Button */,
 				DEA477D32ACB98D900DC3507 /* HeaderView */,
 			);
 			path = Components;
@@ -435,11 +443,11 @@
 				DEA477C32ACB980A00DC3507 /* MainViewViewModel.swift in Sources */,
 				DEA477CF2ACB987C00DC3507 /* RegisterView.swift in Sources */,
 				DEA477CB2ACB984400DC3507 /* LoginView.swift in Sources */,
+				DE740E1C2ACC5EC600BC46D8 /* TLButton.swift in Sources */,
 				DEA477C92ACB983700DC3507 /* LoginViewViewModel.swift in Sources */,
 				DEA477D12ACB988700DC3507 /* RegisterViewViewModel.swift in Sources */,
 				DE8BC5642ACBA3A900F72C20 /* Constants.swift in Sources */,
 				DEA477D52ACB98E300DC3507 /* HeaderView.swift in Sources */,
-				DE8BC5672ACBA4EF00F72C20 /* HeaderViewDataMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

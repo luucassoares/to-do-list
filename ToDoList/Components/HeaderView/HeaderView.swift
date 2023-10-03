@@ -7,30 +7,25 @@
 
 import SwiftUI
 
-protocol HeaderViewDataProtocol {
-    var title: String { get }
-    var subtitle: String { get }
-    var angle: Double { get }
-    var backgroundColor: Color { get }
-}
-
 struct HeaderView: View {
-    
-    let headerViewData: HeaderViewDataProtocol
+    let title: String
+    let subtitle: String
+    let backgroundColor: Color
+    let angle: Double
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 0)
-                .foregroundColor(headerViewData.backgroundColor)
-                .rotationEffect(Angle(degrees: headerViewData.angle))
+                .foregroundColor(backgroundColor)
+                .rotationEffect(Angle(degrees: angle))
                 
             VStack {
-                Text(headerViewData.title)
+                Text(title)
                     .font(.system(size: 50))
                     .foregroundColor(.white)
                     .bold()
                 
-                Text(headerViewData.subtitle)
+                Text(subtitle)
                     .font(.system(size:30))
                     .foregroundColor(.white)
             }
@@ -43,5 +38,8 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView(headerViewData: HeaderViewDataMock())
+    HeaderView(title: "teste",
+               subtitle: "teste",
+               backgroundColor: .green,
+               angle: 15)
 }
