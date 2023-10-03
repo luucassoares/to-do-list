@@ -10,25 +10,21 @@ import SwiftUI
 
 struct K {
     
-    struct LoginView: HeaderViewDataProtocol {
-        var title: String = "To Do List"
-        
-        var subtitle: String = "Getting Things Done."
-        
-        var angle: Double = 15.0
-        
-        var backgroundColor: Color = .pink
-        
+    struct LoginView {
+        static let title: String = "To Do List"
+        static let subtitle: String = "Getting Things Done."
+        static let angle: Double = 15.0
+        static let backgroundColor: Color = .pink
+        static let buttonTitle = "Log In"
+        static let buttonColor: Color = .blue
     }
     
-    struct RegisterView: HeaderViewDataProtocol {
-        var title: String = "Register"
-        
-        var subtitle: String = "Start organizing todos"
-        
-        var angle: Double = -15.0
-        
-        var backgroundColor: Color = .orange
-        
+    struct RegisterView {
+        static let title: String = "Register"
+        static let subtitle: String = "Start organizing todos"
+        static let angle: Double = -15.0
+        static let backgroundColor: Color = .orange
+        static let buttonTitle = "Register"
+        static let buttonColor: Color = .green
     }
 }

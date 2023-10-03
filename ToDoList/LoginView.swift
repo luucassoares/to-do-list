@@ -9,36 +9,32 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State var email = ""
-    @State var password = ""
+    @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
         NavigationView {
             VStack {
                 // Header
-                HeaderView(headerViewData: K.LoginView())
+                HeaderView(title: K.LoginView.title,
+                           subtitle: K.LoginView.subtitle,
+                           backgroundColor: K.LoginView.backgroundColor,
+                           angle: K.LoginView.angle)
                 
                 // Login Form
                 Form {
-                    TextField("Email Address", text: $email)
+                    TextField("Email Address", text: $viewModel.email)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocorrectionDisabled()
+                        .autocapitalization(.none)
+                    
+                    SecureField("Password", text: $viewModel.password)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
-                    SecureField("Password", text: $password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    
-                    Button {
-                        //Attempt Log in
-                    } label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(.blue)
-                            
-                            Text("Log in")
-                                .foregroundColor(.white)
-                                .bold()
-                        }
-                    }
-                    .padding()
+                    TLButton(title: K.LoginView.buttonTitle,
+                             backgroundColor: K.LoginView.buttonColor,
+                             action: {
+                        print("")
+                    })
                 }
                 .offset(y: -50)
                 
